@@ -1,0 +1,24 @@
+{
+  "name": "tictactoe",
+  "version": "1.0.0",
+  "description": "gato game",
+  "scripts": {
+    "dev": "parcel src/index.pug --port 1235",
+    "build": "parcel build src/index.pug"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesus9ias/tictactoe.git"
+  },
+  "author": "Jesus Escamilla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jesus9ias/tictactoe/issues"
+  },
+  "homepage": "https://github.com/jesus9ias/tictactoe#readme",
+  "devDependencies": {
+    "@parcel/transformer-pug": "^2.2.1",
+    "@parcel/transformer-sass": "^2.2.1",
+    "parcel": "^2.2.1"
+  }
+}

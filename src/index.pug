@@ -1,0 +1,27 @@
+doctype html
+html(lang="es")
+  head
+    meta(http-equiv="X-UA-Compatible",content="IE=edge")
+    meta(name="viewport", content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0")
+    link(href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap", rel="stylesheet")
+    link(rel="preconnect", href="https://fonts.gstatic.com")
+    link(rel="stylesheet", href="sass/main.scss")
+  body
+    form#container
+      - for (var n = 1; n <= 9; n++)
+        - var player = 1
+        if (n % 2 == 0)
+          - var player = 2
+        - for (var x = 1; x <= 3; x++)
+          - for (var y = 1; y <= 3; y++)
+            input.check(id='check-' + n + '-' + x + '-' + y, class="check-turn-" + n + " block-" + x + "-" + y + " check-player-" + player, type="checkbox")
+        - for (var x = 1; x <= 3; x++)
+          - for (var y = 1; y <= 3; y++)
+            label.block(for='check-' + n + '-' + x + '-' + y, class="block-turn-" + n + ' block-' + x + '-' + y + ' player-' + player)
+      .ended
+        .image.image--tie
+        .image.image--success
+      button.reset(type="button", onclick="container.reset()") Reset
+        
+
+      
